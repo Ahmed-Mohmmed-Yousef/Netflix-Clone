@@ -11,6 +11,7 @@
 		24A5D29F284143AC00686A1E /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5D29E284143AC00686A1E /* HeroHeaderUIView.swift */; };
 		24A5D2A12842057B00686A1E /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5D2A02842057B00686A1E /* APICaller.swift */; };
 		24A5D2A328420D3700686A1E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5D2A228420D3700686A1E /* Movie.swift */; };
+		24A5D2A528420F9A00686A1E /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5D2A428420F9A00686A1E /* Extentions.swift */; };
 		24C66E4F2840FB7B000DE006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C66E4E2840FB7B000DE006 /* AppDelegate.swift */; };
 		24C66E512840FB7B000DE006 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C66E502840FB7B000DE006 /* SceneDelegate.swift */; };
 		24C66E532840FB7B000DE006 /* MianTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C66E522840FB7B000DE006 /* MianTabBarViewController.swift */; };
@@ -28,6 +29,7 @@
 		24A5D29E284143AC00686A1E /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		24A5D2A02842057B00686A1E /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		24A5D2A228420D3700686A1E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		24A5D2A428420F9A00686A1E /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		24C66E4B2840FB7B000DE006 /* Netflix Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C66E4E2840FB7B000DE006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24C66E502840FB7B000DE006 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		24A5D29A284135AD00686A1E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				24A5D2A428420F9A00686A1E /* Extentions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				24C66E682840FD7E000DE006 /* HomeViewController.swift in Sources */,
 				24C66E592840FB7B000DE006 /* Netflix_Clone.xcdatamodeld in Sources */,
 				24A5D29D284135F500686A1E /* CollectionViewTableViewCell.swift in Sources */,
+				24A5D2A528420F9A00686A1E /* Extentions.swift in Sources */,
 				24C66E532840FB7B000DE006 /* MianTabBarViewController.swift in Sources */,
 				24A5D2A12842057B00686A1E /* APICaller.swift in Sources */,
 				24C66E4F2840FB7B000DE006 /* AppDelegate.swift in Sources */,
