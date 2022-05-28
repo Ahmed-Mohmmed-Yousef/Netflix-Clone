@@ -17,6 +17,7 @@ class CollectionViewTableViewCell: UITableViewCell {
         layout.itemSize = CGSize(width: 140, height: 200)
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collection.backgroundColor = .systemBackground
         return collection
     }()
     
