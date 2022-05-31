@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
         
-        getTrendingMovies()
+        fetchData()
         
     }
     
@@ -49,14 +49,14 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .label
     }
     
-    private func getTrendingMovies() {
-        APICaller.shared.getTrendingMovies { result in
+    private func fetchData() {
+        APICaller.shared.getUpcomingMovies { result in
             switch result {
                 
-            case .success(let movies):
-                print(movies.count)
-            case .failure(let error):
-                print(error.localizedDescription)
+            case .success(let tvs):
+                print(tvs.count)
+            case .failure(let err):
+                print(err.localizedDescription)
             }
         }
     }
