@@ -10,6 +10,7 @@ import UIKit
 class UpcomingViewController: UIViewController {
 
     private var titles: [Title] = []
+    
     private let upcomingTable: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
         table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.id)
