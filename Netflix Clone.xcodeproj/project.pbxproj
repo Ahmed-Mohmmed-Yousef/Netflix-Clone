@@ -25,6 +25,8 @@
 		24CEF79F284629730040D554 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEF79E284629730040D554 /* TitleCollectionViewCell.swift */; };
 		24CEF7A528462DAF0040D554 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 24CEF7A428462DAF0040D554 /* SDWebImage */; };
 		24CEF7A728462DAF0040D554 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 24CEF7A628462DAF0040D554 /* SDWebImageMapKit */; };
+		24CEF7A928466B460040D554 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEF7A828466B460040D554 /* TitleTableViewCell.swift */; };
+		24CEF7AB284671EE0040D554 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEF7AA284671EE0040D554 /* TitleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		24C66E6B2840FFBF000DE006 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		24C66E6D2840FFCC000DE006 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		24CEF79E284629730040D554 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		24CEF7A828466B460040D554 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		24CEF7AA284671EE0040D554 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				24A5D29C284135F500686A1E /* CollectionViewTableViewCell.swift */,
 				24A5D29E284143AC00686A1E /* HeroHeaderUIView.swift */,
 				24CEF79E284629730040D554 /* TitleCollectionViewCell.swift */,
+				24CEF7A828466B460040D554 /* TitleTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -74,6 +79,7 @@
 		24A5D2972841357500686A1E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				24CEF7AA284671EE0040D554 /* TitleViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -236,8 +242,10 @@
 				24CEF79F284629730040D554 /* TitleCollectionViewCell.swift in Sources */,
 				24A5D29D284135F500686A1E /* CollectionViewTableViewCell.swift in Sources */,
 				24A5D2A528420F9A00686A1E /* Extentions.swift in Sources */,
+				24CEF7A928466B460040D554 /* TitleTableViewCell.swift in Sources */,
 				24C66E532840FB7B000DE006 /* MianTabBarViewController.swift in Sources */,
 				24A5D2A12842057B00686A1E /* APICaller.swift in Sources */,
+				24CEF7AB284671EE0040D554 /* TitleViewModel.swift in Sources */,
 				24C66E4F2840FB7B000DE006 /* AppDelegate.swift in Sources */,
 				24C66E512840FB7B000DE006 /* SceneDelegate.swift in Sources */,
 			);
