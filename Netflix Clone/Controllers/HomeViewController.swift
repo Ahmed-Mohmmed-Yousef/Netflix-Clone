@@ -7,6 +7,14 @@
 
 import UIKit
 
+enum Sections: Int {
+    case TrendingMovies = 0
+    case TrendingTv = 1
+    case Popular = 2
+    case Upcomong = 3
+    case TopRated = 4
+}
+
 class HomeViewController: UIViewController {
     
     let sectionTitles: [String] = ["Trending Movie", "Popular", "Trending Tv", "Upcoming Movies", "Top Rated"]
@@ -77,7 +85,66 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.id, for: indexPath) as! CollectionViewTableViewCell
-    
+        
+        let currentScetion = Sections(rawValue: indexPath.section)!
+        
+        switch currentScetion {
+        case .TrendingMovies:
+            APICaller.shared.getUpcomingMovies { result in
+                switch result {
+                    
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    cell.configure(with: [])
+                }
+            }
+        case .TrendingTv:
+            APICaller.shared.getTrendingTvs { result in
+                switch result {
+                    
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    cell.configure(with: [])
+                }
+            }
+        case .Popular:
+            APICaller.shared.getPopular { result in
+                switch result {
+                    
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    cell.configure(with: [])
+                }
+            }
+        case .Upcomong:
+            APICaller.shared.getUpcomingMovies { result in
+                switch result {
+                    
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    cell.configure(with: [])
+                }
+            }
+        case .TopRated:
+            APICaller.shared.getTopRated { result in
+                switch result {
+                    
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    cell.configure(with: [])
+                }
+            }
+        }
         return cell
     }
     
