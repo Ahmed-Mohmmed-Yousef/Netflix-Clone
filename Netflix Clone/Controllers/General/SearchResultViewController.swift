@@ -9,7 +9,11 @@ import UIKit
 
 class SearchResultViewController: UIViewController {
     
-    private var titles: [Title] = []
+    public var titles: [Title] = [] {
+        didSet {
+            DispatchQueue.main.async { [weak self] in self?.searchResultsController.reloadData() }
+        }
+    }
     
     private let searchResultsController: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -28,6 +32,8 @@ class SearchResultViewController: UIViewController {
         view.addSubview(searchResultsController)
         searchResultsController.delegate = self
         searchResultsController.dataSource = self
+        
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -42,12 +48,12 @@ class SearchResultViewController: UIViewController {
 
 extension SearchResultViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10//titles.count
+        return titles.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.id, for: indexPath) as! TitleCollectionViewCell
-        cell.backgroundColor = .systemBlue
+        cell.configure(with: titles[indexPath.row].poster_path ?? "")
         return cell
     }
     

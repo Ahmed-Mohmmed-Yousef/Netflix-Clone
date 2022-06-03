@@ -39,6 +39,8 @@ class SearchViewController: UIViewController {
         
         navigationItem.searchController = searchController
         
+        searchController.searchResultsUpdater = self
+        
         fetchDiscover()
     }
     
@@ -76,6 +78,28 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
+    }
+    
+    
+}
+
+
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        guard let resultController = searchController.searchResultsController as? SearchResultViewController else { return }
+        guard let query = searchBar.text?.trimmingCharacters(in: .whitespaces) else { return }
+        if !query.isEmpty, query.count >= 3 {
+            APICaller.shared.search(with: query) { result in
+                switch result {
+                    
+                case .success(let titles):
+                    resultController.titles = titles
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
     
     
