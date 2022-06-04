@@ -28,6 +28,9 @@
 		24CEF7A928466B460040D554 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEF7A828466B460040D554 /* TitleTableViewCell.swift */; };
 		24CEF7AB284671EE0040D554 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEF7AA284671EE0040D554 /* TitleViewModel.swift */; };
 		24CEF7CF284A674F0040D554 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEF7CE284A674F0040D554 /* SearchResultViewController.swift */; };
+		24CEF7D3284AB1360040D554 /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEF7D2284AB1360040D554 /* YoutubeSearchResponse.swift */; };
+		24CEF7D5284AB3E10040D554 /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEF7D4284AB3E10040D554 /* TitlePreviewViewController.swift */; };
+		24CEF7D7284AB7F70040D554 /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEF7D6284AB7F70040D554 /* TitlePreviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		24CEF7A828466B460040D554 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		24CEF7AA284671EE0040D554 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		24CEF7CE284A674F0040D554 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		24CEF7D2284AB1360040D554 /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
+		24CEF7D4284AB3E10040D554 /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
+		24CEF7D6284AB7F70040D554 /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				24CEF7AA284671EE0040D554 /* TitleViewModel.swift */,
+				24CEF7D6284AB7F70040D554 /* TitlePreviewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -90,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				24A5D2A228420D3700686A1E /* Title.swift */,
+				24CEF7D2284AB1360040D554 /* YoutubeSearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,8 +157,8 @@
 		24C66E652840FD54000DE006 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				24CEF7D0284A67960040D554 /* Core */,
 				24CEF7D1284A67A00040D554 /* General */,
+				24CEF7D0284A67960040D554 /* Core */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -170,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				24CEF7CE284A674F0040D554 /* SearchResultViewController.swift */,
+				24CEF7D4284AB3E10040D554 /* TitlePreviewViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -260,13 +269,16 @@
 				24C66E592840FB7B000DE006 /* Netflix_Clone.xcdatamodeld in Sources */,
 				24CEF79F284629730040D554 /* TitleCollectionViewCell.swift in Sources */,
 				24A5D29D284135F500686A1E /* CollectionViewTableViewCell.swift in Sources */,
+				24CEF7D5284AB3E10040D554 /* TitlePreviewViewController.swift in Sources */,
 				24A5D2A528420F9A00686A1E /* Extentions.swift in Sources */,
 				24CEF7A928466B460040D554 /* TitleTableViewCell.swift in Sources */,
 				24C66E532840FB7B000DE006 /* MianTabBarViewController.swift in Sources */,
+				24CEF7D3284AB1360040D554 /* YoutubeSearchResponse.swift in Sources */,
 				24A5D2A12842057B00686A1E /* APICaller.swift in Sources */,
 				24CEF7CF284A674F0040D554 /* SearchResultViewController.swift in Sources */,
 				24CEF7AB284671EE0040D554 /* TitleViewModel.swift in Sources */,
 				24C66E4F2840FB7B000DE006 /* AppDelegate.swift in Sources */,
+				24CEF7D7284AB7F70040D554 /* TitlePreviewViewModel.swift in Sources */,
 				24C66E512840FB7B000DE006 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

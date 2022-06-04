@@ -58,15 +58,7 @@ class HomeViewController: UIViewController {
     }
     
     private func fetchData() {
-        APICaller.shared.getUpcomingMovies { result in
-            switch result {
-                
-            case .success(let tvs):
-                print(tvs.count)
-            case .failure(let err):
-                print(err.localizedDescription)
-            }
-        }
+//        navigationController?.pushViewController(TitlePreviewViewController(), animated: true)
     }
     
     
@@ -85,7 +77,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.id, for: indexPath) as! CollectionViewTableViewCell
-        
+        cell.delegete = self
         let currentScetion = Sections(rawValue: indexPath.section)!
         
         switch currentScetion {
@@ -174,4 +166,17 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let offset = scrollView.contentOffset.y - defualtOffset
         navigationController?.navigationBar.transform = .init(translationX: 0.0, y: min(0, -offset))
     }
+}
+
+
+extension HomeViewController: CollectionViewTableViewCellDelegate {
+    func collectionViewTableViewCellTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
+        DispatchQueue.main.async { [weak self] in
+            let vc = TitlePreviewViewController()
+            vc.configure(with: viewModel)
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    
 }
