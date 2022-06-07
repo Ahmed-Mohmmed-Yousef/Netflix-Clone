@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		249EC018284DFBDB0028ABF9 /* CompositionalLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249EC017284DFBDB0028ABF9 /* CompositionalLayoutViewController.swift */; };
+		249EC01A284DFBE30028ABF9 /* CompositionalLayoutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249EC019284DFBE30028ABF9 /* CompositionalLayoutViewController.storyboard */; };
+		249EC01C284DFEA00028ABF9 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249EC01B284DFEA00028ABF9 /* MyCollectionViewCell.swift */; };
+		249EC01E284E420A0028ABF9 /* DataPresistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249EC01D284E420A0028ABF9 /* DataPresistenceManager.swift */; };
 		24A5D29D284135F500686A1E /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5D29C284135F500686A1E /* CollectionViewTableViewCell.swift */; };
 		24A5D29F284143AC00686A1E /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5D29E284143AC00686A1E /* HeroHeaderUIView.swift */; };
 		24A5D2A12842057B00686A1E /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5D2A02842057B00686A1E /* APICaller.swift */; };
@@ -34,6 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		249EC017284DFBDB0028ABF9 /* CompositionalLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutViewController.swift; sourceTree = "<group>"; };
+		249EC019284DFBE30028ABF9 /* CompositionalLayoutViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompositionalLayoutViewController.storyboard; sourceTree = "<group>"; };
+		249EC01B284DFEA00028ABF9 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		249EC01D284E420A0028ABF9 /* DataPresistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPresistenceManager.swift; sourceTree = "<group>"; };
 		24A5D29C284135F500686A1E /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		24A5D29E284143AC00686A1E /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		24A5D2A02842057B00686A1E /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
@@ -73,6 +81,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		249EC016284DFB990028ABF9 /* CompositionalLayout */ = {
+			isa = PBXGroup;
+			children = (
+				249EC01B284DFEA00028ABF9 /* MyCollectionViewCell.swift */,
+				249EC017284DFBDB0028ABF9 /* CompositionalLayoutViewController.swift */,
+				249EC019284DFBE30028ABF9 /* CompositionalLayoutViewController.storyboard */,
+			);
+			path = CompositionalLayout;
+			sourceTree = "<group>";
+		};
 		24A5D2962841356F00686A1E /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				24A5D2A02842057B00686A1E /* APICaller.swift */,
+				249EC01D284E420A0028ABF9 /* DataPresistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -137,6 +156,7 @@
 		24C66E4D2840FB7B000DE006 /* Netflix Clone */ = {
 			isa = PBXGroup;
 			children = (
+				249EC016284DFB990028ABF9 /* CompositionalLayout */,
 				24A5D29B284135B400686A1E /* Managers */,
 				24A5D29A284135AD00686A1E /* Resources */,
 				24A5D2982841357B00686A1E /* Models */,
@@ -249,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24C66E5E2840FB81000DE006 /* LaunchScreen.storyboard in Resources */,
+				249EC01A284DFBE30028ABF9 /* CompositionalLayoutViewController.storyboard in Resources */,
 				24C66E5B2840FB81000DE006 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,9 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				249EC01C284DFEA00028ABF9 /* MyCollectionViewCell.swift in Sources */,
 				24C66E6A2840FFB5000DE006 /* UpcomingViewController.swift in Sources */,
 				24A5D29F284143AC00686A1E /* HeroHeaderUIView.swift in Sources */,
 				24A5D2A328420D3700686A1E /* Title.swift in Sources */,
+				249EC01E284E420A0028ABF9 /* DataPresistenceManager.swift in Sources */,
 				24C66E6C2840FFBF000DE006 /* SearchViewController.swift in Sources */,
 				24C66E6E2840FFCC000DE006 /* DownloadsViewController.swift in Sources */,
 				24C66E682840FD7E000DE006 /* HomeViewController.swift in Sources */,
@@ -275,6 +298,7 @@
 				24C66E532840FB7B000DE006 /* MianTabBarViewController.swift in Sources */,
 				24CEF7D3284AB1360040D554 /* YoutubeSearchResponse.swift in Sources */,
 				24A5D2A12842057B00686A1E /* APICaller.swift in Sources */,
+				249EC018284DFBDB0028ABF9 /* CompositionalLayoutViewController.swift in Sources */,
 				24CEF7CF284A674F0040D554 /* SearchResultViewController.swift in Sources */,
 				24CEF7AB284671EE0040D554 /* TitleViewModel.swift in Sources */,
 				24C66E4F2840FB7B000DE006 /* AppDelegate.swift in Sources */,

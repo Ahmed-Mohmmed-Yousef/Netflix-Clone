@@ -72,4 +72,8 @@ class TitleTableViewCell: UITableViewCell {
         titleLbl.text = model.titleName
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.titlesPosterImageView.image = nil
+    }
 }

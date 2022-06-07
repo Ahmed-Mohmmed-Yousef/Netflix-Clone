@@ -80,6 +80,27 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         return 140
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let title = titles[indexPath.row]
+        guard let name = title.original_name ?? title.original_title else { return }
+        
+        APICaller.shared.getMovie(with: name) { [weak self] result in
+            switch result {
+            
+            case .success(let element):
+                DispatchQueue.main.async {
+                    let vc = TitlePreviewViewController()
+                    vc.configure(with: TitlePreviewViewModel(title: name, youtubeView: element, titleOverview: title.overview ?? ""))
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     
 }
 
@@ -88,6 +109,7 @@ extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
         guard let resultController = searchController.searchResultsController as? SearchResultViewController else { return }
+        resultController.delegate = self
         guard let query = searchBar.text?.trimmingCharacters(in: .whitespaces) else { return }
         if !query.isEmpty, query.count >= 3 {
             APICaller.shared.search(with: query) { result in
@@ -99,6 +121,16 @@ extension SearchViewController: UISearchResultsUpdating {
                     print(error.localizedDescription)
                 }
             }
+        }
+    }
+}
+
+extension SearchViewController: SearchResultViewControllerDelegate {
+    func searchResultViewControllerDidTapItem(_ viewModel: TitlePreviewViewModel) {
+        DispatchQueue.main.async { [weak self] in
+            let vc = TitlePreviewViewController()
+            vc.configure(with: viewModel)
+            self?.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

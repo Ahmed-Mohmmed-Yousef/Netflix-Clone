@@ -72,4 +72,25 @@ extension UpcomingViewController: UITableViewDataSource, UITableViewDelegate {
         return 140
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let title = titles[indexPath.row]
+        guard let name = title.original_name ?? title.original_title else { return }
+        
+        APICaller.shared.getMovie(with: name) { [weak self] result in
+            switch result {
+            
+            case .success(let element):
+                DispatchQueue.main.async {
+                    let vc = TitlePreviewViewController()
+                    vc.configure(with: TitlePreviewViewModel(title: name, youtubeView: element, titleOverview: title.overview ?? ""))
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
 }
